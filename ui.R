@@ -21,5 +21,7 @@ shinyUI(navbarPage("Best price to rent your place",
                                                           value = 4, min = 1, max = 8, step = 1)), 
                                 mainPanel(tableOutput("Inputvals"),tableOutput("Results")))), 
                    tabPanel("About",
-                            mainPanel(
-                                includeMarkdown("about.md")))))
+                            mainPanel("Welcome !", br(), br(), "This site is providing a tool to compute the price of the rent.",
+                                                br(), br(), "We required you to provide your apartment details: first, the area; second, the number of rooms.", 
+                                                br(), br(), "The result contains a table with a price fitted to our linear model and an upper and lower bound from a 95% confidence interval.", 
+                                                br(), br(), "Source code for ui.R and server.R files are available on the GitHub repo: ", a("https://github.com/FChemin/DDPWeek4Assignment")))))
